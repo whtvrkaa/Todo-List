@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+input:focus {
+    outline: none;
+}
+
+
+$Montserrat : 'Montserrat', sans-serif;
+$Open-Sans : 'Open Sans', sans-serif;
+
+$color-primary: rgb(240, 240, 240);
+$color-secondary: #406e8eff;
+$color-secondary-light: rgb(255, 255, 255);
+$color-text-title: #ffa84e;
+$color-text-dataTitle : #dd4600;
+$color-text-dataDesc : #737373;
+$color-text-cancel : #a7a7a7;
+$color-button-cancel : #008a94;
+
+@mixin flex-column($justify, $align) {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin flex-row($justify, $align) {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+  /* MEDIA QUERIES */
+  $phone-small: "only screen and (max-width : 320px)";
+  $phone-medium:  "only screen and (max-width : 588px)";
+  $phone-large: "only screen and (max-width : 667px)";
+  $tablet-small: "only screen and (max-width : 998px)";
+  $tablet-large: "only screen and (max-width : 1024px)";
+  $desktop-large: "only screen and (min-width : 1440px)";
+
+  .material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
