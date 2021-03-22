@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import TodoForm from './TodoForm'
 import { RiCloseCircleLine } from 'react-icons/ri';
 import { RiEditLine } from 'react-icons/ri';
+import './_todo.scss'
 
 function Todo({ todos, completeTodo, removeTodo, updateTodo }) {
     const [edit, setEdit] = useState({
@@ -22,6 +23,7 @@ function Todo({ todos, completeTodo, removeTodo, updateTodo }) {
     }
 
     return todos.map((todo, index) => (
+     
         <div className={todo.isComplete ? 'todo-row complete' : 'todo-row'}
             key={index}>
             <div key={todo.id} onClick={() => completeTodo(todo.id)}>
@@ -37,6 +39,7 @@ function Todo({ todos, completeTodo, removeTodo, updateTodo }) {
                     className="edit-icon" />
             </div>
         </div>
+     
     ))
 
 }
